@@ -17,7 +17,17 @@
 <div class="container">
 <h1>Registra Concurso</h1>
 
-	
+	<form th:action="@{/submit}" method="post">
+  <div class="form-group">
+    <label for="start-date">Start Date:</label>
+    <input type="text" class="form-control datepicker" id="start-date" name="startDate">
+  </div>
+  <div class="form-group">
+    <label for="end-date">End Date:</label>
+    <input type="text" class="form-control datepicker" id="end-date" name="endDate">
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 	
 </div>
 

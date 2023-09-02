@@ -24,8 +24,8 @@ public class AlumnoController {
 	@GetMapping(value = "/verConcurso" )
 	public String verConcurso() {return "registraConcurso";}
 
-	@GetMapping(value = "/verJugador" )
-	public String verJugador() {return "registraJugador";}
+	//@GetMapping(value = "/verJugador" )
+	//public String verJugador() {return "registraJugador";}
 
 
 	@PostMapping("/registraAlumno")
@@ -33,6 +33,7 @@ public class AlumnoController {
 	public Map<?, ?> registra(Alumno obj){
 		HashMap<String, String> map = new HashMap<String, String>();
 		Alumno objSalida = service.insertaAlumno(obj);
+
 		if (objSalida == null) {
 			map.put("MENSAJE", "Error en el registro");
 		}else {
