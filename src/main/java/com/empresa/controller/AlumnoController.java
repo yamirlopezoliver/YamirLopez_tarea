@@ -21,6 +21,7 @@ public class AlumnoController {
 	@GetMapping(value = "/verAlumno" )
 	public String verAlumno() {return "registraAlumno";}
 
+<<<<<<< HEAD
 	@GetMapping(value = "/verConcurso" )
 	public String verConcurso() {return "registraConcurso";}
 
@@ -28,6 +29,8 @@ public class AlumnoController {
 	//public String verJugador() {return "registraJugador";}
 
 
+=======
+>>>>>>> branch 'master' of https://github.com/jorgejacinto9701/Spring-JAVA17-Semana01-Finalizado
 	@PostMapping("/registraAlumno")
 	@ResponseBody
 	public Map<?, ?> registra(Alumno obj){
