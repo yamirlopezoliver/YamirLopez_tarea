@@ -34,7 +34,7 @@ public class JugadorController {
 		if (objSalida == null) {
 			map.put("MENSAJE", "Error en el registro");
 		}else {
-			map.put("MENSAJE", "Registro exitosisimo");
+			map.put("MENSAJE", "Registro exitosísimo");
 		}
 		return map;
 	}
