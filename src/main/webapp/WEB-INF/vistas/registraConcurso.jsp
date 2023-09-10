@@ -32,7 +32,7 @@
 			<div class="form-group  col-sm-6">
 				<div class="col-sm-7">
 					<label class="control-label" for="id_fechainicio">Fecha de inicio</label>
-					<input class="form-control" type="date" id="id_fechaini" name="fechainicio">
+					<input class="form-control" type="date" id="id_fechainicio" name="fechainicio">
 			
 				</div>
 				</div>
@@ -116,16 +116,16 @@ $(document).ready(function() {
                         stringLength: {
                             min: 3,
                             max: 40,
-                            message: 'El nombre es de 3 a 40 caracteres'
+                            message: 'El nombre es de 3 a 30 caracteres'
                         },
                     }
                 },
                 
                 fechainicio:{
-                    selector: "#id_fechaini",
+                    selector: "#id_fechainicio",
                     validators:{
                         notEmpty: {
-                             message: 'La fecha es obligatorio'
+                             message: 'La fecha inicial es obligatoria'
                         }
                     }
                 },
