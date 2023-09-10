@@ -19,7 +19,7 @@
 
 		<form id="id_form"> 
 		<div class="row" style="margin-top: 5%">
-			<div class="form-group col-sm-5">
+			<div class="form-group col-sm-6">
 				<div class="col-sm-4">
 					<label class="control-label" for="id_nombre">Nombre</label>
 				</div>
@@ -27,29 +27,39 @@
 					<input class="form-control" type="text" id="id_nombre" name="nombre" placeholder="Ingrese el nombre" maxlength="40">
 				</div>
 			</div>
-			<div class="row" style="margin-top: 5%">
+			</div>
 			
-			<div class="col-md-4">
-			<label class="control-label" for="id_fechaini">Fecha de inicio</label>
-				<input class="form-control" type="date" id="id_fechaini">
-			</div>	
-			<div class="col-md-4">
-				<label class="control-label" for="id_fechafin">Fecha final</label>
-				<input class="form-control" type="date" id="id_fechafin">
-			</div>
-			</div>
+			<div class="form-group  col-sm-6">
+				<div class="col-sm-7">
+					<label class="control-label" for="id_fechainicio">Fecha de inicio</label>
+					<input class="form-control" type="date" id="id_fechaini" name="fechainicio">
+			
 				</div>
-				<div class="row" style="margin-top: 2%">
-			<div class="col-sm-1">
-				<label class="control-label" for="id_estado">Estado</label > 
-			</div>	
-			<div class="col-sm-1">
-				<input type="checkbox" class="custom-control-input" id="id_estado" checked="checked" name="estado" value="1"/>
-			</div>			
-		</div>
-		<div class="row" style="margin-top: 5%" align="center"	>
+				</div>
+	   <div class="form-group  col-sm-6">
+				<div class="col-sm-7">
+					<label class="control-label" for="id_fechafin">Fecha final</label>
+					<input class="form-control" type="date" id="id_fechafin" name="fechafin">
+				</div>	
+			</div>
+				
+				 <div class="form-group col-sm-6">
+		                                        <label class="col-lg-3 control-label" for="id_estado">Estado</label>
+		                                      
+		                                        <div class="col-lg-8">
+													<select class="form-control" id="id_estado" name="estado">
+														<option value=" ">[Seleccione]</option>
+														<option value="Activo">Activo</option>
+														<option value="Inactivo">Inactivo</option>
+													</select>
+		                                        </div>
+		                                    </div> 
+		                                     <div class="form-group  col-sm-6">	
+		<div class="row" style="margin-top: 2%" align="center"	>
 				<button id="id_registrar" type="button" class="btn btn-primary" >Crear Concurso</button>
 		</div>
+		</div>
+			
 	</form>
 </div>
 <script type="text/javascript">
@@ -83,7 +93,7 @@ $("#id_registrar").click(function (){
 
 function limpiarFormulario(){
 	$('#id_nombre').val('');
-	$('#id_fechaini').val('');
+	$('#id_fechainicio').val('');
 	$('#id_fechafin').val('');
 	$('#id_estado').val('');
 }
@@ -111,7 +121,7 @@ $(document).ready(function() {
                     }
                 },
                 
-                fechaini:{
+                fechainicio:{
                     selector: "#id_fechaini",
                     validators:{
                         notEmpty: {

@@ -10,34 +10,30 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.empresa.entity.Alumno;
+import com.empresa.entity.Concurso;
 import com.empresa.service.AlumnoService;
+import com.empresa.service.ConcursoService;
 
 @Controller
-public class AlumnoController {
+public class ConcursoController {
 
 	@Autowired
-	private AlumnoService service;
-	
-	@GetMapping(value = "/verAlumno" )
-	public String verAlumno() {return "registraAlumno";}
+	private ConcursoService service;
+
+	@GetMapping(value = "/verConcurso" )
+	public String verConcurso() {return "registraConcurso";}
 
 
-	//@GetMapping(value = "/verConcurso" )
-	//public String verConcurso() {return "registraConcurso";}
-
-	//@GetMapping(value = "/verJugador" )
-	//public String verJugador() {return "registraJugador";}
-
-	@PostMapping("/registraAlumno")
+	@PostMapping("/registraConcurso")
 	@ResponseBody
-	public Map<?, ?> registra(Alumno obj){
+	public Map<?, ?> registra(Concurso obj){
 		HashMap<String, String> map = new HashMap<String, String>();
-		Alumno objSalida = service.insertaAlumno(obj);
+		Concurso objSalida = service.insertaConcurso(obj);
 
 		if (objSalida == null) {
 			map.put("MENSAJE", "Error en el registro");
 		}else {
-			map.put("MENSAJE", "Registro exitoso");
+			map.put("MENSAJE", "¡Felicidades! registro exitoso");
 		}
 		return map;
 	}
